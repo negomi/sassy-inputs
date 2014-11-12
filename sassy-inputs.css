@@ -1,0 +1,41 @@
+input[type=radio].sassy,
+input[type=checkbox].sassy {
+  display: none; }
+  input[type=radio].sassy + label,
+  input[type=checkbox].sassy + label {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 15px;
+    padding-left: 25px;
+    position: relative; }
+    input[type=radio].sassy + label:before,
+    input[type=checkbox].sassy + label:before {
+      background-color: #777777;
+      border: none;
+      bottom: 1px;
+      content: "";
+      font-family: sans-serif;
+      left: 0;
+      position: absolute; }
+  input[type=radio].sassy:checked + label:before,
+  input[type=checkbox].sassy:checked + label:before {
+    color: coral;
+    text-align: center; }
+
+input[type=radio].sassy + label:before {
+  border-radius: 15px;
+  height: 18px;
+  width: 18px; }
+input[type=radio].sassy:checked + label:before {
+  content: "\2022";
+  font-size: 33px;
+  line-height: 20px; }
+
+input[type=checkbox].sassy + label:before {
+  border-radius: 3px;
+  height: 16px;
+  width: 16px; }
+input[type=checkbox].sassy:checked + label:before {
+  content: "\2713";
+  font-size: 15px;
+  line-height: 15px; }

@@ -1,0 +1,69 @@
+$sassy-fill-color: coral;
+$sassy-outer-color: #777;
+$sassy-border: none;
+$sassy-fill-size-radio: 33px;
+$sassy-fill-size-check: 15px;
+$sassy-label-padding-left: 25px;
+$sassy-label-margin-right: 15px;
+
+input[type=radio],
+input[type=checkbox] {
+    &.sassy {
+        display: none;
+
+        + label {
+            cursor: pointer;
+            display: inline-block;
+            margin-right: $sassy-label-margin-right;
+            padding-left: $sassy-label-padding-left;
+            position: relative;
+
+            &:before {
+                background-color: $sassy-outer-color;
+                border: $sassy-border;
+                bottom: 1px;
+                content: "";
+                font-family: sans-serif;
+                left: 0;
+                position: absolute;
+            }
+        }
+
+        &:checked + label:before {
+            color: $sassy-fill-color;
+            text-align: center;
+        }
+    }
+}
+
+input[type=radio] {
+    &.sassy {
+        + label:before {
+            border-radius: 15px;
+            height: 18px;
+            width: 18px;
+        }
+
+        &:checked + label:before {
+            content: "\2022";
+            font-size: $sassy-fill-size-radio;
+            line-height: 20px;
+        }
+    }
+}
+
+input[type=checkbox] {
+    &.sassy {
+        + label:before {
+            border-radius: 3px;
+            height: 16px;
+            width: 16px;
+        }
+
+        &:checked + label:before {
+            content: "\2713";
+            font-size: $sassy-fill-size-check;
+            line-height: 15px;
+        }
+    }
+}
