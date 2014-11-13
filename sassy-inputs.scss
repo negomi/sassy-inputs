@@ -1,8 +1,9 @@
 $sassy-fill-color: coral;
 $sassy-outer-color: #777;
 $sassy-border: none;
+$sassy-display: inline-block;
 $sassy-fill-size-radio: 33px;
-$sassy-fill-size-check: 15px;
+$sassy-fill-size-check: 18px;
 $sassy-label-padding-left: 25px;
 $sassy-label-margin-right: 15px;
 
@@ -13,7 +14,7 @@ input[type=checkbox] {
 
         + label {
             cursor: pointer;
-            display: inline-block;
+            display: $sassy-display;
             margin-right: $sassy-label-margin-right;
             padding-left: $sassy-label-padding-left;
             position: relative;
@@ -63,7 +64,7 @@ input[type=checkbox] {
         &:checked + label:before {
             content: "\2713";
             font-size: $sassy-fill-size-check;
-            line-height: 15px;
+            line-height: 18px;
         }
     }
 }

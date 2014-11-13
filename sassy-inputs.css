@@ -37,5 +37,5 @@ input[type=checkbox].sassy + label:before {
   width: 16px; }
 input[type=checkbox].sassy:checked + label:before {
   content: "\2713";
-  font-size: 15px;
-  line-height: 15px; }
+  font-size: 18px;
+  line-height: 18px; }
