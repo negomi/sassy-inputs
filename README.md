@@ -3,7 +3,7 @@ sassy-inputs
 
 Flat, customisable CSS3 alternatives to radio buttons and checkboxes, built in Sass.
 
-They don't interfere with the rest of your design - even the labels will be unstyled, or inherit from your existing CSS.
+They won't interfere with the rest of your design - even the labels will be unstyled, or inherit from your existing CSS.
 
 Getting started
 ------------
@@ -18,7 +18,7 @@ Sassy Inputs work by styling the label, so the order is important. Wrapping the 
 
 Now apply the class `sassy` to the radio button or checkbox elements you want to style. You can do this by adding it directly as a class on the element, but with Sass, I prefer to use `@extend .sassy` in the relevant places to keep it separate from my HTML.
 
-Customising
+Customisation
 ------------
 The SCSS file includes the following variables:
 
@@ -32,3 +32,9 @@ The SCSS file includes the following variables:
     $sassy-label-margin-right: 15px;
 
 The defaults are quite plain but you can play around with colours, sizes, borders etc. to get a different effect. If you're not using Sass, just edit the CSS directly. It's pretty small.
+
+Browser support
+------------
+These work in [all browsers that support CSS3](http://caniuse.com/#search=checked) (specifically the `:checked` pseudo-class selector), but because they use HTML characters for the content, these don't look the same across browsers.
+
+If this visual consistency is important, you can use a small dot or check image for the `content` property of each `:before` pseudo-element instead.
