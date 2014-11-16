@@ -16,7 +16,7 @@ Make sure your `<input type="radio">` and `<input type="checkbox">` elements are
 
 Sassy Inputs work by styling the label, so the order is important. Wrapping the input element between label tags won't work.
 
-Now apply the class `sassy` to the radio button or checkbox elements you want to style. You can do this by adding it directly as a class on the element, but with Sass, I prefer to use `@extend .sassy' in the relevant places to keep it separate from my HTML.
+Now apply the class `sassy` to the radio button or checkbox elements you want to style. You can do this by adding it directly as a class on the element, but with Sass, I prefer to use `@extend .sassy` in the relevant places to keep it separate from my HTML.
 
 Customising
 ------------
