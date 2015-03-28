@@ -24,17 +24,16 @@ The SCSS file includes the following variables:
 
     $sassy-fill-color: coral;
     $sassy-outer-color: #777;
-    $sassy-border: none;
     $sassy-display: inline-block;
-    $sassy-fill-size-radio: 33px;
+    $sassy-fill-size-radio: 10px;
     $sassy-fill-size-check: 18px;
     $sassy-label-padding-left: 25px;
     $sassy-label-margin-right: 15px;
 
-The defaults are quite plain but you can play around with colours, sizes, borders etc. to get a different effect. If you're not using Sass, just edit the CSS directly. It's pretty small.
+The defaults are quite plain but you can play around with colours, sizes etc. to get a different effect. If you're not using Sass, just edit the CSS directly. It's pretty small.
 
 Browser support
 ------------
-These work in [all browsers that support CSS3](http://caniuse.com/#search=checked) (specifically the `:checked` pseudo-class selector), but because they use HTML characters for the content, these don't look the same across browsers.
+These work in [all browsers that support CSS3](http://caniuse.com/#search=checked) (specifically the `:checked` pseudo-class selector), but because the checkboxes use an HTML character for the content, these don't look the same across browsers.
 
-If this visual consistency is important, you can use a small dot or check image for the `content` property of each `:before` pseudo-element instead.
+If this visual consistency is important, you can use an image for the `content` property of the `:before` pseudo-element instead.
