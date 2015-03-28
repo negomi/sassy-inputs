@@ -64,7 +64,7 @@
             <h2>Examples</h2>
 
             <h3>Radio buttons</h3>
-            <input class="sassy" id="radio1" type="radio" name="response" value="radio1">
+            <input class="sassy" id="radio1" type="radio" name="response" value="radio1" checked="checked">
             <label for="radio1">Radio button 1</label>
             <input class="sassy" id="radio2" type="radio" name="response" value="radio2">
             <label for="radio2">Radio button 2</label>
@@ -97,21 +97,20 @@
 <pre>
 $sassy-fill-color: coral;
 $sassy-outer-color: #777;
-$sassy-border: none;
 $sassy-display: inline-block;
-$sassy-fill-size-radio: 33px;
+$sassy-fill-size-radio: 10px;
 $sassy-fill-size-check: 18px;
 $sassy-label-padding-left: 25px;
 $sassy-label-margin-right: 15px;
 </pre>
 
-            <p>The defaults are quite plain but you can play around with colours, sizes, borders etc. to get a different effect. If you're not using Sass, just edit the CSS directly. It's pretty small.</p>
+            <p>The defaults are quite plain but you can play around with colours, sizes etc. to get a different effect. If you're not using Sass, just edit the CSS directly. It's pretty small.</p>
 
             <h2>Browser support</h2>
 
-            <p>These work in <a href="http://caniuse.com/#search=checked">all browsers that support CSS3</a> (specifically the <code>:checked</code> pseudo-class selector), but because they use HTML characters for the content, these don't look the same across browsers.</p>
+            <p>These work in <a href="http://caniuse.com/#search=checked">all browsers that support CSS3</a> (specifically the <code>:checked</code> pseudo-class selector), but because the checkboxes use an HTML character for the content, these don't look the same across browsers.</p>
 
-            <p>If this visual consistency is important, you can use a small dot or check image for the <code>content</code> property of each <code>:before</code> pseudo-element instead.</p>
+            <p>If this visual consistency is important, you can use an image for the <code>content</code> property of the <code>:before</code> pseudo-element instead.</p>
         </div>
     </body>
 </html>

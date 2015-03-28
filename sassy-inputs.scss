@@ -4,9 +4,8 @@
 
 $sassy-fill-color: coral;
 $sassy-outer-color: #777;
-$sassy-border: none;
 $sassy-display: inline-block;
-$sassy-fill-size-radio: 33px;
+$sassy-fill-size-radio: 10px;
 $sassy-fill-size-check: 18px;
 $sassy-label-padding-left: 25px;
 $sassy-label-margin-right: 15px;
@@ -25,7 +24,6 @@ input[type=checkbox] {
 
             &:before {
                 background-color: $sassy-outer-color;
-                border: $sassy-border;
                 bottom: 1px;
                 content: "";
                 font-family: sans-serif;
@@ -50,9 +48,12 @@ input[type=radio] {
         }
 
         &:checked + label:before {
-            content: "\2022";
-            font-size: $sassy-fill-size-radio;
-            line-height: 20px;
+            content: "";
+            display: block;
+            height: $sassy-fill-size-radio;
+            width: $sassy-fill-size-radio;
+            background: $sassy-fill-color;
+            border: (18px - $sassy-fill-size-radio)/2 solid $sassy-outer-color;
         }
     }
 }
