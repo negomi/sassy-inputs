@@ -1,0 +1,30 @@
+{
+  "name": "sassy-inputs",
+  "version": "0.0.2",
+  "description": "A form input mixin library for Sass",
+  "main": "sass/main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/negomi/sassy-inputs.git"
+  },
+  "keywords": [
+    "sass",
+    "forms"
+  ],
+  "author": "Imogen Wentworth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/negomi/sassy-inputs/issues"
+  },
+  "homepage": "https://github.com/negomi/sassy-inputs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "dependencies": {}
+}
