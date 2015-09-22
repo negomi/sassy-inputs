@@ -11,8 +11,11 @@
     "url": "git+https://github.com/negomi/sassy-inputs.git"
   },
   "keywords": [
+    "CSS3",
+    "scss",
     "sass",
-    "forms"
+    "forms",
+    "mixins"
   ],
   "author": "Imogen Wentworth",
   "license": "MIT",
