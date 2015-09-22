@@ -1,0 +1,63 @@
+@mixin sassy-select {
+  position: relative;
+  color: inherit;
+
+  &::after {
+    content: '\25BE';
+    position: absolute;
+    top: rem(10px);
+    right: rem(15px);
+    color: $sassy-base-color;
+  }
+
+  select {
+    @include appearance-none;
+
+    height: rem(39px);
+    width: 100%;
+    padding-left: rem(10px);
+    margin-bottom: rem(10px);
+    font-family: inherit;
+    font-size: rem(14px);
+
+    border: rem(1px) solid lighten($sassy-base-color, 10%);
+    border-radius: rem(3px);
+    outline: none;
+
+    background-color: white;
+
+    &:focus {
+      border-color: $sassy-accent-color;
+    }
+
+    &:disabled {
+      background-color: $sassy-disabled-color;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin sassy-select-multiple {
+  @include appearance-none;
+
+  width: 100%;
+  padding: 0 rem(10px);
+  margin-bottom: rem(10px);
+  font-family: inherit;
+  font-size: rem(14px);
+
+  border: rem(1px) solid lighten($sassy-base-color, 10%);
+  border-radius: rem(3px);
+  outline: none;
+
+  background-color: white;
+
+  &:focus {
+    border-color: $sassy-accent-color;
+  }
+
+  &:disabled {
+    background-color: $sassy-disabled-color;
+    cursor: not-allowed;
+  }
+}

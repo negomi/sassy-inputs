@@ -1,0 +1,60 @@
+@mixin sassy-checkbox {
+  position: absolute;
+  left: -1000rem;
+
+  + label {
+    position: relative;
+    cursor: pointer;
+    margin-right: rem(15px);
+    padding-left: rem(25px);
+    font-size: rem(14px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: rem(16px);
+      width: rem(16px);
+      border-radius: rem(3px);
+      background-color: $sassy-base-color;
+      font-family: sans-serif;
+    }
+
+    &::after {
+      content: '';
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &:checked + label::after {
+    content: '\2713';
+    position: absolute;
+    left: rem(2px);
+    top: rem(1px);
+    font-size: rem(16px);
+    line-height: rem(16px);
+    color: $sassy-accent-color;
+    text-align: center;
+    opacity: 1;
+  }
+
+  &:focus + label::before {
+    box-shadow: 0 rem(1px) 0 darken($sassy-base-color, 30%);
+  }
+
+  &:disabled {
+    + label {
+      cursor: not-allowed;
+
+      &::before {
+        background-color: $sassy-disabled-color;
+      }
+    }
+
+    &:checked + label::after {
+      color: darken($sassy-disabled-color, 20%);
+    }
+  }
+}
