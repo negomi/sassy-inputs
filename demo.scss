@@ -1,0 +1,125 @@
+@import "sass/main";
+
+body {
+  background: #eee;
+  color: #444;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.demo-wrap {
+  background: white;
+  border-radius: 5px;
+  max-width: 600px;
+  padding: 10px 50px 30px;
+  margin: 50px auto;
+}
+
+h1 {
+  color: coral;
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+p {
+  line-height: 25px;
+}
+
+a {
+  color: coral;
+}
+
+code, pre {
+  background-color: #ffe5dc;
+  border-radius: 3px;
+  border: 1px solid #ffb296;
+  font-size: 1.1em;
+}
+
+code {
+  padding: 0 5px;
+}
+
+pre {
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+fieldset {
+  border: none;
+  padding: 0 0 8px 0;
+  margin: 0;
+}
+
+.mixin-list {
+  line-height: 25px;
+}
+
+.sass-demo {
+  padding: 5px;
+  position: relative;
+  margin-top: 30px;
+
+  &::before {
+    content: 'demo.scss';
+    position: absolute;
+    top: -20px;
+    color: gray;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-style: italic;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .demo-wrap {
+    padding: 10px 20px 30px;
+    margin: 20px 10px;
+  }
+}
+
+input[type=text],
+input[type=url],
+input[type=email],
+input[type=password],
+input[type=number] {
+  @include sassy-text;
+}
+
+textarea {
+  @include sassy-textarea;
+}
+
+input[type=search] {
+  @include sassy-search;
+}
+
+input[type=checkbox] {
+  @include sassy-checkbox;
+}
+
+input[type=radio] {
+  @include sassy-radio;
+}
+
+.select-wrap {
+  @include sassy-select;
+}
+
+select[multiple] {
+  @include sassy-select-multiple;
+}
+
+input[type=submit],
+input[type=button],
+button {
+  @include sassy-button;
+  color: white;
+}
