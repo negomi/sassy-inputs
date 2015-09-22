@@ -1,5 +1,5 @@
 @mixin sassy-button {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 
   cursor: pointer;
 
