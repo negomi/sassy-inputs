@@ -1,39 +1,149 @@
 sassy-inputs
 ============
+**Minimal CSS3 cross-browser form input styles.**
 
-Flat, customisable CSS3 alternatives to radio buttons and checkboxes, built in Sass.
+Sassy Inputs is a Sass mixin library designed to bring simple, uniform, unobtrusive styles to form input fields.
 
-They won't interfere with the rest of your design - even the labels will be unstyled, or inherit from your existing CSS.
+It aims to smooth out the differences in native form styling across browsers, by customizing input fields as much as is currently possible with pure CSS.
 
-Getting started
-------------
-Grab either the [SCSS](https://raw.githubusercontent.com/negomi/sassy-inputs/master/sassy-inputs.scss) or [CSS](https://raw.githubusercontent.com/negomi/sassy-inputs/master/sassy-inputs.css) file and include it in your project. With CSS, the only difference is you won't get Sass variables to edit.
+Sassy Inputs are customizable, fully keyboard operable, and include a disabled state.
 
-Make sure your `<input type="radio">` and `<input type="checkbox">` elements are written in this format, with the label after the input:
+## Getting started
 
-    <input type="radio" id="radio1" name="groupname" value="thisvalue">
-    <label for="radio1">Radio button 1</label>
+To download from npm and save to your [package.json](https://docs.npmjs.com/files/package.json):
 
-Sassy Inputs work by styling the label, so the order is important. Wrapping the input element between label tags won't work.
+`npm install sassy-inputs --save`
 
-Now apply the class `sassy` to the radio button or checkbox elements you want to style. You can do this by adding it directly as a class on the element, but with Sass, I prefer to use `@extend .sassy` in the relevant places to keep it separate from my HTML.
+At the top of your Sass file, before you use any of the mixins:
 
-Customisation
-------------
-The SCSS file includes the following variables:
+`@import "node_modules/sassy-inputs/sass/main";`
 
-    $sassy-fill-color: coral;
-    $sassy-outer-color: #777;
-    $sassy-display: inline-block;
-    $sassy-fill-size-radio: 10px;
-    $sassy-fill-size-check: 18px;
-    $sassy-label-padding-left: 25px;
-    $sassy-label-margin-right: 15px;
+## Mixins
 
-The defaults are quite plain but you can play around with colours, sizes etc. to get a different effect. If you're not using Sass, just edit the CSS directly. It's pretty small.
+*   `sassy-text`
+*   `sassy-textarea`
+*   `sassy-search`
+*   `sassy-select`
+*   `sassy-select-multiple`
+*   `sassy-radio`
+*   `sassy-checkbox`
+*   `sassy-button`
 
-Browser support
-------------
-These work in [all browsers that support CSS3](http://caniuse.com/#search=checked) (specifically the `:checked` pseudo-class selector), but because the checkboxes use an HTML character for the content, these don't look the same across browsers.
+## Usage
 
-If this visual consistency is important, you can use an image for the `content` property of the `:before` pseudo-element instead.
+### Text fields
+
+You can use the `sassy-text` mixin for most HTML5 plain single-line text fields, including text, email, password, number and URL.
+
+``` scss
+input[type=text],
+input[type=url],
+input[type=email],
+input[type=password],
+input[type=number] {
+  @include sassy-text;
+}
+```
+
+#### Text area
+
+``` scss
+textarea {
+  @include sassy-textarea;
+}
+```
+
+#### Search
+
+``` scss
+textarea {
+  @include sassy-search;
+}
+```
+
+### Dropdowns
+
+#### Select
+
+For select dropdowns, you will need to put your `<select>` element in a wrapper, and apply the mixin to the wrapper instead:
+
+``` html
+<div class="select-wrap">
+  <select>
+    <option value="option">Option 1</option>
+    <option value="option">Option 2</option>
+    <option value="option">Option 3</option>
+  </select>
+</div>
+```
+
+``` scss
+.select-wrap {
+  @include sassy-select;
+}
+```
+
+#### Multiple select
+
+``` scss
+select[multiple] {
+  @include sassy-select-multiple;
+}
+```
+
+### Radio buttons
+
+Make sure your `<input type="radio">` elements are written in this format, with the label after the input:
+
+``` html
+<input type="radio" id="radio1" name="groupname" value="thisvalue">
+<label for="radio1">Radio button 1</label>
+```
+
+``` scss
+input[type=radio] {
+  @include sassy-radio;
+}
+```
+
+### Checkboxes
+
+Make sure your `<input type="checkbox">` elements are written in this format, with the label after the input:
+
+``` html
+<input type="checkbox" id="check1" name="groupname" value="thisvalue">
+<label for="check1">Checkbox 1</label>
+```
+
+``` scss
+input[type=checkbox] {
+  @include sassy-checkbox;
+}
+```
+
+### Buttons
+
+``` scss
+input[type=submit],
+input[type=button],
+button {
+  @include sassy-button;
+}
+```
+
+## Customization
+
+Sassy Inputs use the following default variables:
+
+``` scss
+$sassy-base-color: #777 !default;
+$sassy-accent-color: coral !default;
+$sassy-disabled-color: #eee !default;
+```
+
+To change a color, simply assign the variable before importing Sassy Inputs:
+
+``` scss
+$sassy-accent-color: rgb(233, 206, 51);
+@import "node_modules/sassy-inputs/sass/main";
+```
