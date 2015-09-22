@@ -1,116 +1,241 @@
 <html>
-    <head>
-        <title>Sassy Inputs</title>
-        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="sassy-inputs.css">
-        <style>
-            body {
-                background: #eee;
-                color: #444;
-                font-family: Helvetica, Arial, sans-serif;
-            }
-            .demo-wrap {
-                background: white;
-                border-radius: 5px;
-                max-width: 600px;
-                padding: 10px 50px 30px;
-                margin: 50px auto;
-            }
-            h1 {
-                color: coral;
-                font-family: 'Pacifico', cursive;
-                font-size: 50px;
-            }
-            h2 {
-                margin-top: 40px;
-            }
-            h3 {
-                margin-top: 30px;
-            }
-            p {
-                line-height: 25px;
-            }
-            a {
-                color: coral;
-            }
-            code, pre {
-                background-color: #ffe5dc;
-                border-radius: 3px;
-                border: 1px solid #ffb296;
-                font-size: 1.1em;
-            }
-            code {
-                padding: 0 5px;
-            }
-            pre {
-                padding: 5px;
-            }
-            @media screen and (max-width: 640px) {
-                .demo-wrap {
-                    padding: 10px 20px 30px;
-                    margin: 20px 10px;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="demo-wrap">
-            <h1>Sassy Inputs</h1>
+<head>
+  <title>Sassy Inputs</title>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <a href="https://github.com/negomi/sassy-inputs/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+  <div class="demo-wrap">
+    <h1>Sassy Inputs</h1>
 
-            <p>Flat, customisable CSS3 alternatives to radio buttons and checkboxes, built in Sass.</p>
+    <h4>Minimal CSS3 cross-browser form input styles.</h4>
 
-            <p>They won't interfere with the rest of your design - even the labels will be unstyled, or inherit from your existing CSS.</p>
+    <p>Sassy Inputs is a Sass mixin library designed to bring simple, uniform, unobtrusive styles to form input fields.</p>
 
-            <h2>Examples</h2>
+    <p>It aims to smooth out the differences in native form styling across browsers, by customizing input fields as much as is currently possible with pure CSS.</p>
 
-            <h3>Radio buttons</h3>
-            <input class="sassy" id="radio1" type="radio" name="response" value="radio1" checked="checked">
-            <label for="radio1">Radio button 1</label>
-            <input class="sassy" id="radio2" type="radio" name="response" value="radio2">
-            <label for="radio2">Radio button 2</label>
+    <p>Sassy Inputs are customizable, fully keyboard operable, and include a disabled state.</p>
 
-            <h3>Checkboxes</h3>
-            <input class="sassy" id="check1" type="checkbox" name="check" value="check1">
-            <label for="check1">Checkbox 1</label>
-            <input class="sassy" id="check2" type="checkbox" name="check" value="check2">
-            <label for="check2">Checkbox 2</label>
+    <h2>Getting started</h2>
 
-            <h2>Getting started</h2>
+    <p>To download from npm and save to your <a href="https://docs.npmjs.com/files/package.json">package.json</a>:</p>
 
-            <p>Grab either the <a href="https://raw.githubusercontent.com/negomi/sassy-inputs/master/sassy-inputs.scss">SCSS</a> or <a href="https://raw.githubusercontent.com/negomi/sassy-inputs/master/sassy-inputs.css">CSS</a> file and include it in your project. With CSS, the only difference is you won't get Sass variables to edit.</p>
+    <code>npm install sassy-inputs --save</code>
 
-            <p>Make sure your <code>&lt;input type="radio"&gt;</code> and <code>&lt;input type="checkbox"&gt;</code> elements are written in this format, with the label after the input:</p>
+    <p>At the top of your Sass file, before you use any of the mixins:</p>
+
+    <code>@import "node_modules/sassy-inputs/sass/main";</code>
+
+    <h2>Mixins</h2>
+    <ul class="mixin-list">
+      <li><code>sassy-text</code></li>
+      <li><code>sassy-textarea</code></li>
+      <li><code>sassy-search</code></li>
+      <li><code>sassy-select</code></li>
+      <li><code>sassy-select-multiple</code></li>
+      <li><code>sassy-radio</code></li>
+      <li><code>sassy-checkbox</code></li>
+      <li><code>sassy-button</code></li>
+    </ul>
+
+    <h2>Examples &amp; usage</h2>
+
+    <h3>Text fields</h3>
+    <h4>Text</h4>
+    <input type="text" name="demo_text" placeholder="Enter some text...">
+    <input type="text" name="demo_text" placeholder="Enter some text..." disabled>
+
+    <h4>Email</h4>
+    <input type="email" name="demo_email" placeholder="e.g. your@email.com">
+    <input type="email" name="demo_email" placeholder="e.g. your@email.com" disabled>
+
+    <h4>Password</h4>
+    <input type="password" name="demo_password" placeholder="Minimum 8 characters">
+    <input type="password" name="demo_password" placeholder="Minimum 8 characters" disabled>
+
+    <h4>URL</h4>
+    <input type="url" name="demo_url" placeholder="http://...">
+    <input type="url" name="demo_url" placeholder="http://..." disabled>
+
+    <h4>Number</h4>
+    <input type="number" name="demo_number" placeholder="Enter a number...">
+    <input type="number" name="demo_number" placeholder="Enter a number..." disabled>
+
+    <p>You can use the <code>sassy-text</code> mixin for most HTML5 plain single-line text fields, including email, password, number and URL.</p>
+
+<pre class="sass-demo">
+input[type=text],
+input[type=url],
+input[type=email],
+input[type=password],
+input[type=number] {
+  @include sassy-text;
+}
+</pre>
+
+    <h4>Text area</h4>
+    <textarea name="demo_textarea" rows="8" placeholder="Enter more text..."></textarea>
+    <textarea name="demo_textarea" rows="8" placeholder="Enter more text..." disabled></textarea>
+<pre class="sass-demo">
+textarea {
+  @include sassy-textarea;
+}
+</pre>
+
+    <h4>Search</h4>
+    <input type="search" name="demo_search" placeholder="Search for something...">
+    <input type="search" name="demo_search" placeholder="Search for something..." disabled>
+<pre class="sass-demo">
+textarea {
+  @include sassy-search;
+}
+</pre>
+
+    <h3>Dropdowns</h3>
+    <h4>Select</h4>
+
+    <div class="select-wrap">
+      <select>
+        <option value="option">Option 1</option>
+        <option value="option">Option 2</option>
+        <option value="option">Option 3</option>
+        <option value="option">Option 4</option>
+        <option value="option">Option 5</option>
+      </select>
+    </div>
+    <div class="select-wrap">
+      <select disabled>
+        <option value="option">Option 1</option>
+        <option value="option">Option 2</option>
+        <option value="option">Option 3</option>
+        <option value="option">Option 4</option>
+        <option value="option">Option 5</option>
+      </select>
+    </div>
+    <p>For select dropdowns, you will need to put your <code>&lt;select&gt;</code> element in a wrapper, and apply the mixin to the wrapper instead:</p>
+<pre>
+&lt;div class="select-wrap"&gt;
+  &lt;select&gt;
+    &lt;option value="option"&gt;Option 1&lt;/option&gt;
+    &lt;option value="option"&gt;Option 2&lt;/option&gt;
+    &lt;option value="option"&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="sass-demo">
+.select-wrap {
+  @include sassy-select;
+}
+</pre>
+
+    <h4>Multiple select</h4>
+    <select multiple>
+      <option value="option">Option 1</option>
+      <option value="option">Option 2</option>
+      <option value="option">Option 3</option>
+      <option value="option">Option 4</option>
+      <option value="option">Option 5</option>
+    </select>
+    <select multiple disabled>
+      <option value="option">Option 1</option>
+      <option value="option">Option 2</option>
+      <option value="option">Option 3</option>
+      <option value="option">Option 4</option>
+      <option value="option">Option 5</option>
+    </select>
+
+<pre class="sass-demo">
+select[multiple] {
+  @include sassy-select-multiple;
+}
+</pre>
+
+    <h3>Radio buttons</h3>
+    <fieldset>
+      <input id="radio1" type="radio" name="radio" value="radio1" checked>
+      <label for="radio1">Radio button 1</label>
+      <input id="radio2" type="radio" name="radio" value="radio2">
+      <label for="radio2">Radio button 2</label>
+    </fieldset>
+
+    <fieldset>
+      <input id="radio3" type="radio" name="radio-disabled" value="radio3" disabled checked>
+      <label for="radio3">Disabled checked</label>
+      <input id="radio4" type="radio" name="radio-disabled" value="radio4" disabled>
+      <label for="radio4">Disabled unchecked</label>
+    </fieldset>
+
+    <p>Make sure your <code>&lt;input type="radio"&gt;</code> elements are written in this format, with the label after the input:</p>
 
 <pre>
 &lt;input type="radio" id="radio1" name="groupname" value="thisvalue"&gt;
 &lt;label for="radio1"&gt;Radio button 1&lt;/label&gt;
 </pre>
 
-            <p>Sassy Inputs work by styling the label, so the order is important. Wrapping the input element between label tags won't work.</p>
-
-            <p>Now apply the class <code>sassy</code> to the radio button or checkbox elements you want to style. You can do this by adding it directly as a class on the element, but with Sass, I prefer to use <code>@extend .sassy</code> in the relevant places to keep it separate from my HTML.</p>
-
-            <h2>Customisation</h2>
-
-            <p>The SCSS file includes the following variables:</p>
-
-<pre>
-$sassy-fill-color: coral;
-$sassy-outer-color: #777;
-$sassy-display: inline-block;
-$sassy-fill-size-radio: 10px;
-$sassy-fill-size-check: 18px;
-$sassy-label-padding-left: 25px;
-$sassy-label-margin-right: 15px;
+<pre class="sass-demo">
+input[type=radio] {
+  @include sassy-radio;
+}
 </pre>
 
-            <p>The defaults are quite plain but you can play around with colours, sizes etc. to get a different effect. If you're not using Sass, just edit the CSS directly. It's pretty small.</p>
+    <h3>Checkboxes</h3>
+    <fieldset>
+      <input id="check1" type="checkbox" name="check" value="check1">
+      <label for="check1">Checkbox 1</label>
+      <input id="check2" type="checkbox" name="check" value="check2">
+      <label for="check2">Checkbox 2</label>
+    </fieldset>
 
-            <h2>Browser support</h2>
+    <fieldset>
+      <input id="check3" type="checkbox" name="check-disabled" value="check3" disabled checked>
+      <label for="check3">Disabled checked</label>
+      <input id="check4" type="checkbox" name="check-disabled" value="check4" disabled>
+      <label for="check4">Disabled unchecked</label>
+    </fieldset>
 
-            <p>These work in <a href="http://caniuse.com/#search=checked">all browsers that support CSS3</a> (specifically the <code>:checked</code> pseudo-class selector), but because the checkboxes use an HTML character for the content, these don't look the same across browsers.</p>
+    <p>Make sure your <code>&lt;input type="checkbox"&gt;</code> elements are written in this format, with the label after the input:</p>
 
-            <p>If this visual consistency is important, you can use an image for the <code>content</code> property of the <code>:before</code> pseudo-element instead.</p>
-        </div>
-    </body>
+<pre>
+&lt;input type="checkbox" id="check1" name="groupname" value="thisvalue"&gt;
+&lt;label for="check1"&gt;Checkbox 1&lt;/label&gt;
+</pre>
+
+<pre class="sass-demo">
+input[type=checkbox] {
+  @include sassy-checkbox;
+}
+</pre>
+
+    <h3>Buttons</h3>
+    <button type="button" name="button">Submit</button>
+    <button type="button" name="button" disabled>Submit</button>
+
+<pre class="sass-demo">
+input[type=submit],
+input[type=button],
+button {
+  @include sassy-button;
+}
+</pre>
+
+    <h2>Customization</h2>
+
+    <p>Sassy Inputs use the following default variables:</p>
+
+<pre>
+$sassy-base-color: #777 !default;
+$sassy-accent-color: coral !default;
+$sassy-disabled-color: #eee !default;
+</pre>
+
+  <p>To change a color, simply assign the variable before importing Sassy Inputs:</p>
+
+<pre>
+$sassy-accent-color: rgb(233, 206, 51);
+@import "node_modules/sassy-inputs/sass/main";
+</pre>
+  </div>
+</body>
 </html>
