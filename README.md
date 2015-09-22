@@ -8,15 +8,30 @@ It aims to smooth out the differences in native form styling across browsers, by
 
 Sassy Inputs are customizable, fully keyboard operable, and include a disabled state.
 
+## Running the project locally
+
+In the project directory, run:
+
+```
+npm install
+gulp
+```
+
+Then go to [http://localhost:3000/](http://localhost:3000/) in a browser.
+
 ## Getting started
 
 To download from npm and save to your [package.json](https://docs.npmjs.com/files/package.json):
 
-`npm install sassy-inputs --save`
+```
+npm install sassy-inputs --save
+```
 
 At the top of your Sass file, before you use any of the mixins:
 
-`@import "node_modules/sassy-inputs/sass/main";`
+```
+@import "node_modules/sassy-inputs/sass/main";
+```
 
 ## Mixins
 
