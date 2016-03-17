@@ -21,7 +21,7 @@ Then go to [http://localhost:3000/](http://localhost:3000/) in a browser.
 
 ## Getting started
 
-To download from npm and save to your [package.json](https://docs.npmjs.com/files/package.json):
+### Using npm
 
 ```
 npm install sassy-inputs --save
@@ -31,6 +31,18 @@ At the top of your Sass file, before you use any of the mixins:
 
 ```
 @import "node_modules/sassy-inputs/sass/main";
+```
+
+### Using Bower
+
+```
+bower install sassy-inputs --save
+```
+
+At the top of your Sass file, before you use any of the mixins:
+
+```
+@import "bower_components/sassy-inputs/sass/main";
 ```
 
 ## Mixins
