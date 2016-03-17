@@ -1,0 +1,25 @@
+{
+  "name": "sassy-inputs",
+  "description": "Minimal CSS3 cross-browser form input styles",
+  "main": "sass/main.scss",
+  "authors": [
+    "Imogen Wentworth"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "CSS3",
+    "scss",
+    "sass",
+    "forms",
+    "mixins"
+  ],
+  "homepage": "https://github.com/negomi/sassy-inputs",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
