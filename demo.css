@@ -142,7 +142,8 @@ input[type=search] {
 
 input[type=checkbox] {
   position: absolute;
-  left: -1000rem; }
+  left: -1000rem;
+  /* Not depending on the users font here inproves consistency. */ }
   input[type=checkbox] + label {
     position: relative;
     cursor: pointer;
@@ -164,17 +165,20 @@ input[type=checkbox] {
       opacity: 0;
       transition: opacity 0.3s; }
   input[type=checkbox]:checked + label::after {
-    content: '\2713';
+    content: '';
     position: absolute;
-    left: 0.125rem;
-    top: 0.0625rem;
-    font-size: 1rem;
-    line-height: 1rem;
-    color: coral;
-    text-align: center;
-    opacity: 1; }
+    display: block;
+    opacity: 1;
+    left: 0.3125rem;
+    top: 0;
+    width: 0.1875rem;
+    height: 0.6875rem;
+    border: solid coral;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    line-height: 1rem; }
   input[type=checkbox]:focus + label::before {
-    box-shadow: 0 0.0625rem 0 #2a2a2a; }
+    box-shadow: 0 0.0625rem 0 #2b2b2b; }
   input[type=checkbox]:disabled + label {
     cursor: not-allowed; }
     input[type=checkbox]:disabled + label::before {
@@ -215,7 +219,7 @@ input[type=radio] {
     background-color: coral;
     text-align: center; }
   input[type=radio]:focus + label::before {
-    box-shadow: 0 0.0625rem 0 #2a2a2a; }
+    box-shadow: 0 0.0625rem 0 #2b2b2b; }
   input[type=radio]:disabled + label {
     cursor: not-allowed; }
     input[type=radio]:disabled + label::before {
@@ -225,13 +229,16 @@ input[type=radio] {
 
 .select-wrap {
   position: relative;
-  color: inherit; }
+  color: inherit;
+  /* Target IE9 and IE10 */ }
   .select-wrap::after {
     content: '\25BE';
     position: absolute;
     top: 0.625rem;
     right: 0.9375rem;
     color: #777; }
+  .select-wrap select::-ms-expand {
+    display: none; }
   .select-wrap select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -290,11 +297,11 @@ button {
   button::-moz-focus-inner {
     border: 0;
     /* Removes dotted line in Firefox */ }
-  input[type=submit]:hover,
-  input[type=submit]:focus,
+  input[type=submit]:hover, input[type=submit]:focus,
   input[type=button]:hover,
   input[type=button]:focus,
-  button:hover, button:focus {
+  button:hover,
+  button:focus {
     box-shadow: 0 0.125rem 0 #777; }
   input[type=submit]:active,
   input[type=button]:active,
@@ -305,9 +312,9 @@ button {
   button:disabled {
     background-color: #eee;
     cursor: not-allowed; }
-    input[type=submit]:disabled:hover,
-    input[type=submit]:disabled:focus,
+    input[type=submit]:disabled:hover, input[type=submit]:disabled:focus,
     input[type=button]:disabled:hover,
     input[type=button]:disabled:focus,
-    button:disabled:hover, button:disabled:focus {
+    button:disabled:hover,
+    button:disabled:focus {
       box-shadow: none; }
