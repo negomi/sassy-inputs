@@ -28,16 +28,20 @@
     }
   }
 
+  /* Not depending on the user's font here improves consistency. */
   &:checked + label::after {
-    content: '\2713';
+    content: '';
     position: absolute;
-    left: rem(2px);
-    top: rem(1px);
-    font-size: rem(16px);
-    line-height: rem(16px);
-    color: $sassy-accent-color;
-    text-align: center;
+    display: block;
     opacity: 1;
+    left: rem(5px);
+    top: 0;
+    width:  rem(3px);
+    height: rem(11px);
+    border: solid $sassy-accent-color;
+    border-width: 0 rem(3px) rem(3px) 0;
+    transform: rotate(45deg);
+    line-height: rem(16px);
   }
 
   &:focus + label::before {
@@ -54,7 +58,7 @@
     }
 
     &:checked + label::after {
-      color: darken($sassy-disabled-color, 20%);
+      border-color: darken($sassy-disabled-color, 20%);
     }
   }
 }
