@@ -143,7 +143,7 @@ input[type=search] {
 input[type=checkbox] {
   position: absolute;
   left: -1000rem;
-  /* Not depending on the users font here inproves consistency. */ }
+  /* Not depending on the user's font here improves consistency. */ }
   input[type=checkbox] + label {
     position: relative;
     cursor: pointer;
@@ -174,7 +174,7 @@ input[type=checkbox] {
     width: 0.1875rem;
     height: 0.6875rem;
     border: solid coral;
-    border-width: 0 3px 3px 0;
+    border-width: 0 0.1875rem 0.1875rem 0;
     transform: rotate(45deg);
     line-height: 1rem; }
   input[type=checkbox]:focus + label::before {
@@ -184,7 +184,7 @@ input[type=checkbox] {
     input[type=checkbox]:disabled + label::before {
       background-color: #eee; }
   input[type=checkbox]:disabled:checked + label::after {
-    color: #bbbbbb; }
+    border-color: #bbbbbb; }
 
 input[type=radio] {
   position: absolute;
