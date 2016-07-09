@@ -1,16 +1,16 @@
 @mixin sassy-text {
   box-sizing: border-box;
 
-  min-height: rem(39px);
+  min-height: rem(39);
   width: 100%;
-  padding: rem(10px);
-  margin-bottom: rem(10px);
+  padding: rem(10);
+  margin-bottom: rem(10);
   font-family: inherit;
-  font-size: rem(14px);
+  font-size: rem(14);
   vertical-align: middle;
 
-  border: rem(1px) solid lighten($sassy-base-color, 10%);
-  border-radius: rem(3px);
+  border: rem(1) solid lighten($sassy-base-color, 10%);
+  border-radius: rem(3);
   outline: none;
 
   background-color: white;
@@ -29,7 +29,7 @@
   @include sassy-text;
   @include appearance-none;
 
-  padding: 0 rem(4px);
+  padding: 0 rem(4);
 }
 
 @mixin sassy-textarea {

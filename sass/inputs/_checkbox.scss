@@ -5,18 +5,18 @@
   + label {
     position: relative;
     cursor: pointer;
-    margin-right: rem(15px);
-    padding-left: rem(25px);
-    font-size: rem(14px);
+    margin-right: rem(15);
+    padding-left: rem(25);
+    font-size: rem(14);
 
     &::before {
       content: '';
       position: absolute;
       left: 0;
       bottom: 0;
-      height: rem(16px);
-      width: rem(16px);
-      border-radius: rem(3px);
+      height: rem(16);
+      width: rem(16);
+      border-radius: rem(3);
       background-color: $sassy-base-color;
       font-family: sans-serif;
     }
@@ -34,18 +34,18 @@
     position: absolute;
     display: block;
     opacity: 1;
-    left: rem(5px);
+    left: rem(5);
     top: 0;
-    width:  rem(3px);
-    height: rem(11px);
+    width:  rem(3);
+    height: rem(11);
     border: solid $sassy-accent-color;
-    border-width: 0 rem(3px) rem(3px) 0;
+    border-width: 0 rem(3) rem(3) 0;
     transform: rotate(45deg);
-    line-height: rem(16px);
+    line-height: rem(16);
   }
 
   &:focus + label::before {
-    box-shadow: 0 rem(1px) 0 darken($sassy-base-color, 30%);
+    box-shadow: 0 rem(1) 0 darken($sassy-base-color, 30%);
   }
 
   &:disabled {

@@ -5,8 +5,8 @@
   &::after {
     content: '\25BE';
     position: absolute;
-    top: rem(10px);
-    right: rem(15px);
+    top: rem(10);
+    right: rem(15);
     color: $sassy-base-color;
   }
 
@@ -18,15 +18,15 @@
   select {
     @include appearance-none;
 
-    height: rem(39px);
+    height: rem(39);
     width: 100%;
-    padding-left: rem(10px);
-    margin-bottom: rem(10px);
+    padding-left: rem(10);
+    margin-bottom: rem(10);
     font-family: inherit;
-    font-size: rem(14px);
+    font-size: rem(14);
 
-    border: rem(1px) solid lighten($sassy-base-color, 10%);
-    border-radius: rem(3px);
+    border: rem(1) solid lighten($sassy-base-color, 10%);
+    border-radius: rem(3);
     outline: none;
 
     background-color: white;
@@ -46,13 +46,13 @@
   @include appearance-none;
 
   width: 100%;
-  padding: 0 rem(10px);
-  margin-bottom: rem(10px);
+  padding: 0 rem(10);
+  margin-bottom: rem(10);
   font-family: inherit;
-  font-size: rem(14px);
+  font-size: rem(14);
 
-  border: rem(1px) solid lighten($sassy-base-color, 10%);
-  border-radius: rem(3px);
+  border: rem(1) solid lighten($sassy-base-color, 10%);
+  border-radius: rem(3);
   outline: none;
 
   background-color: white;

@@ -1,10 +1,4 @@
 @function rem($pxval) {
-  @if not unitless($pxval) {
-    $pxval: strip-units($pxval);
-  }
-
-  $base: 16px;
-  $base: strip-units($base);
-
+  $base: 16;
   @return ($pxval / $base) * 1rem;
 }
