@@ -53,7 +53,7 @@
     }
 
     &:checked + label::after {
-      background-color: darken($sassy-disabled-color, 20%);
+      background-color: darken($sassy-disabled-color, 30%);
     }
   }
 }

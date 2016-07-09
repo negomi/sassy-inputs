@@ -58,7 +58,7 @@
     }
 
     &:checked + label::after {
-      border-color: darken($sassy-disabled-color, 20%);
+      border-color: darken($sassy-disabled-color, 30%);
     }
   }
 }

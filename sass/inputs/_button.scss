@@ -29,6 +29,7 @@
   }
 
   &:disabled {
+    color: darken($sassy-disabled-color, 30%);
     background-color: $sassy-disabled-color;
     cursor: not-allowed;
 

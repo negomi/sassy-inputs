@@ -184,7 +184,7 @@ input[type=checkbox] {
     input[type=checkbox]:disabled + label::before {
       background-color: #eee; }
   input[type=checkbox]:disabled:checked + label::after {
-    border-color: #bbbbbb; }
+    border-color: #a2a2a2; }
 
 input[type=radio] {
   position: absolute;
@@ -225,7 +225,7 @@ input[type=radio] {
     input[type=radio]:disabled + label::before {
       background-color: #eee; }
   input[type=radio]:disabled:checked + label::after {
-    background-color: #bbbbbb; }
+    background-color: #a2a2a2; }
 
 .select-wrap {
   position: relative;
@@ -310,6 +310,7 @@ button {
   input[type=submit]:disabled,
   input[type=button]:disabled,
   button:disabled {
+    color: #a2a2a2;
     background-color: #eee;
     cursor: not-allowed; }
     input[type=submit]:disabled:hover, input[type=submit]:disabled:focus,
