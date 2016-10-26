@@ -8,6 +8,7 @@
     top: rem(10);
     right: rem(15);
     color: $sassy-base-color;
+    pointer-events: none;
   }
 
   /* Target IE9 and IE10 */
