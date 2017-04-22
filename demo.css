@@ -236,7 +236,8 @@ input[type=radio] {
     position: absolute;
     top: 0.625rem;
     right: 0.9375rem;
-    color: #777; }
+    color: #777;
+    pointer-events: none; }
   .select-wrap select::-ms-expand {
     display: none; }
   .select-wrap select {
