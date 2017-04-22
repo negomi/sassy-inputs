@@ -1,6 +1,6 @@
 {
   "name": "sassy-inputs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Minimal CSS3 cross-browser form input styles",
   "main": "sass/main.scss",
   "authors": [
